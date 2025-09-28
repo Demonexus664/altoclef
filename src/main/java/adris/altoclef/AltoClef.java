@@ -1,8 +1,10 @@
 package adris.altoclef;
 
 
+import adris.altoclef.Config;
 import adris.altoclef.butler.Butler;
 import adris.altoclef.chains.*;
+import adris.altoclef.movement.AdvancedParkourModule;
 import adris.altoclef.trackers.BlockScanner;
 import adris.altoclef.commandsystem.CommandExecutor;
 import adris.altoclef.commandsystem.TabCompleter;
@@ -80,6 +82,8 @@ public class AltoClef implements ModInitializer {
     private MessageSender messageSender;
     private InputControls inputControls;
     private SlotHandler slotHandler;
+    private final Config config = new Config();
+    private AdvancedParkourModule advancedParkourModule;
     // Butler
     private Butler butler;
     // Pausing
@@ -153,6 +157,7 @@ public class AltoClef implements ModInitializer {
         messageSender = new MessageSender();
         inputControls = new InputControls();
         slotHandler = new SlotHandler(this);
+        advancedParkourModule = new AdvancedParkourModule(this, config);
 
         butler = new Butler(this);
 
@@ -339,6 +344,17 @@ public class AltoClef implements ModInitializer {
      */
     public BotBehaviour getBehaviour() {
         return botBehaviour;
+    }
+
+    public Config getConfig() {
+        return config;
+    }
+
+    public AdvancedParkourModule getAdvancedParkourModule() {
+        if (advancedParkourModule == null) {
+            advancedParkourModule = new AdvancedParkourModule(this, config);
+        }
+        return advancedParkourModule;
     }
 
     /**
