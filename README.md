@@ -1,120 +1,99 @@
-# Links
-- [About](#altoclef)
-- [Versions](#versions)
-- [Download](#download)
-- [FAQ](#faq)
-- [Other useful files](#other-useful-files)
+Links
 
-# AltoClef
-*Plays block game.*
+About
 
-*Powered by Baritone.*
+Versions
 
-A client side bot that tries to beat Minecraft on its own...
+Download
 
-**This fork is still under development and is nowhere near perfect, if you have any questions, suggestions, ideas or find a bug don't hesitate to reach out!
-You can use the [issues](https://github.com/MiranCZ/altoclef/issues). Or contact me on discord!**
+FAQ
 
-Became [the first bot to beat Minecraft fully autonomously](https://youtu.be/baAa6s8tahA) on May 24, 2021.
+Other useful files
 
-**Join the [Discord Server](https://discord.gg/JdFP4Kqdqc)** for discussions/updates/goofs & gaffs
+Rylan’s AltoClef Fork
 
-## About this fork
-This fork aims to improve AltoClef by fixing a lot of bugs and optimizing some things. The main focus is optimizing the `MarvionBeatMinecraftTask` (I will just refer to it as `BeatMinecraftTask`) from [Marvion's fork](https://github.com/MarvionKirito/altoclef).
+Plays block game… but smarter.
+Powered by Baritone + new features.
 
-Because I rewrote a good portion of the `BeatMinecraftTask` a lot of the config settings don't work. Although I plan to implement configs in the future of course.  
+A client-side bot that can beat Minecraft on its own — now with extra focus on PvE combat, PvP mechanics, advanced parkour, smoother movement, and more features.
 
-## The preprocessor
-I am currently using the [replay mod preprocessor](https://github.com/ReplayMod/preprocessor) to keep the mod updated across multiple versions at the same time.
+⚠️ This fork is still under active development. Expect bugs and half-finished systems. If you have suggestions, ideas, or find bugs, open an issue or contact me directly.
 
-### Versions
-Thanks to that, the mod is currently available on **fabric** for (basically) all versions between `1.21.1` and `1.16.5` (inclusive).
+About this fork
 
-(If there is a specific version in this range that you would like to use, and it isn't supported you can try creating an issue).
+This fork builds on MiranCZ’s Altoclef fork
+ and the original Altoclef project
+.
 
+My goals:
 
-> [!NOTE]   
-> All of the versions use the "same release" of Altoclef, although some of them use older versions of baritone.
-You can check out the baritone [here](https://github.com/MiranCZ/baritone_altoclef)
+Stronger PvE combat AI (smarter mob fighting).
 
+Experimental PvP logic (axes vs shields, strafing, timing).
 
-## How it works
+Advanced parkour: sprint chains, head-hitters, ladder/vine grabs, clutch block placement mid-jump.
 
-Take a look at this [Guide from the wiki](https://github.com/MiranCZ/altoclef/wiki/1:-Documentation:-Big-Picture)
-or this [Video explanation](https://youtu.be/q5OmcinQ2ck?t=387)
+Optional less robotic movement (yaw/pitch smoothing, timing jitter).
 
+High-level “do whatever it takes” mode for big goals (get diamonds, finish parkour course, grab Elytra, collect armor trims).
 
-## Download
-> [!IMPORTANT]  
-> After installing, please move/delete your old baritone configurations if you have any. Preexisting baritone
-configurations will interfere with altoclef and introduce bugs. This will be fixed in the future.
+Long-term: expanded item goals (armor trims, Elytra runs, more).
 
+Versions
 
-Here is a list of links for download of the latest versions for convenience. 
+Like the upstream fork, this uses the ReplayMod preprocessor
+ to support many Fabric versions.
+Target range: 1.16.5 → 1.21.1 (inclusive).
 
-| Version | Fabric download link                                                                                          |
-|---------|---------------------------------------------------------------------------------------------------------------|
-| 1.21.1  | [AltoClef 0.19 download](https://github.com/MiranCZ/altoclef/releases/download/0.19/altoclef-1.21.1-0.19.jar) |
-| 1.21    | [AltoClef 0.19 download](https://github.com/MiranCZ/altoclef/releases/download/0.19/altoclef-1.21-0.19.jar)   |
-| 1.20.6  | [AltoClef 0.19 download](https://github.com/MiranCZ/altoclef/releases/download/0.19/altoclef-1.20.6-0.19.jar) |
-| 1.20.5  | [AltoClef 0.19 download](https://github.com/MiranCZ/altoclef/releases/download/0.19/altoclef-1.20.5-0.19.jar) |
-| 1.20.4  | [AltoClef 0.19 download](https://github.com/MiranCZ/altoclef/releases/download/0.19/altoclef-1.20.4-0.19.jar) |
-| 1.20.2  | [AltoClef 0.19 download](https://github.com/MiranCZ/altoclef/releases/download/0.19/altoclef-1.20.2-0.19.jar) |
-| 1.20.1  | [AltoClef 0.19 download](https://github.com/MiranCZ/altoclef/releases/download/0.19/altoclef-1.20.1-0.19.jar) |
-| 1.19.4  | [AltoClef 0.19 download](https://github.com/MiranCZ/altoclef/releases/download/0.19/altoclef-1.19.4-0.19.jar) |
-| 1.18.2  | [AltoClef 0.19 download](https://github.com/MiranCZ/altoclef/releases/download/0.19/altoclef-1.18.2-0.19.jar) |
-| 1.18    | [AltoClef 0.19 download](https://github.com/MiranCZ/altoclef/releases/download/0.19/altoclef-1.18-0.19.jar)   |
-| 1.17.1  | [AltoClef 0.19 download](https://github.com/MiranCZ/altoclef/releases/download/0.19/altoclef-1.17.1-0.19.jar) |
-| 1.16.5  | [AltoClef 0.19 download](https://github.com/MiranCZ/altoclef/releases/download/0.19/altoclef-1.16.5-0.19.jar) |
+How it works
 
+Altoclef + Baritone together manage goals and pathing.
 
-You can also [check releases](https://github.com/MiranCZ/altoclef/releases) for all previous releases.
+My fork layers new tasks (combat, trims, Elytra) and parkour injection on top of Baritone.
 
+See the original guide
+ for base architecture.
 
-## FAQ
+Download
 
-### My Altoclef is crashing! What do I do?
+⚠️ Important: remove old Baritone configs before installing. They conflict with Altoclef.
 
-> [!WARNING]    
-> If you are trying to run AltoClef on cracked launchers (TLauncher, launchers to run the game on mobile etc...) or unofficial launchers there is a high change I might not help you.
+Releases
 
-- First check if you downloaded the right file for the right Minecraft version, every release has the name in the following pattern: `altoclef-<minecraftVersion>-<altoclefVersion>.jar`.
+(work in progress — once I publish my own builds, they’ll be here)
 
+For now, check Releases
+.
 
-- You **DO NOT** need to include baritone in your `mods` folder, it is already included in Altoclef. If you did include it, remove it.
+FAQ
+Crashing?
 
+Make sure you downloaded the correct JAR for your Minecraft version.
 
-- Altoclef **is not** intended to be used with other mods, so if the cause of the crash is another mod you are using it is very likely I won't do anything about that.
+Don’t add separate Baritone jars — Altoclef bundles it.
 
+Altoclef doesn’t play well with many other mods. Try running it alone.
 
-If you checked everything above and are still having trouble you can reach out to me on Altoclef discord (or create an issue).
+If you’re still stuck, open an issue and include:
 
-**Your message should include the following things:** exactly what problem you are having,
-what Minecraft version are you trying to run with what Altoclef version,
-specify that you are referring to this fork (there are multiple forks, so it makes everyone's life easier), what mods (if any) you are using and a crash-log
-(if the mod didn't crash on startup but rather after a specific action recording or description of that would also help).
+Minecraft version
 
-### Why was `terminator` and the ability to attack players removed?
-I don't feel like this bot should be focused on use on servers and having to handle players complicates things.
-So I just decided to remove that behaviour (at least for now).
+Altoclef fork version
 
-### Can you add X version of Minecraft?
+Crash log or reproduction steps
 
-**Please note that for newest version of minecraft I need to wait for [baritone](https://github.com/MeteorDevelopment/baritone) to be ported first. Unless there is a branch for the specific version, please do not message me about that version since I need to wait for baritone to be ported first.**
+Why add PvP/PvE back?
 
+This fork’s focus is fun + experimentation. Combat is a core part of Minecraft, so I want the bot to handle it.
 
-I am planning to support all versions from 1.16.5 and above.
+Can you add X version?
 
-You can open an issue if you want support for specific version in that range that isn't supported yet.
+If Baritone isn’t ported yet, then I can’t. I aim to support everything from 1.16.5+.
 
-### Can you add integration with LLM?
-no.
+Other useful files
 
+Usage Guide
 
-## Other useful files
+TODO / Future Features
 
-### [Usage Guide](usage.md)
-
-### [TODO's/Future Features](TODO.md)
-
-### [Development Guide](develop.md)
+Development Guide
