@@ -1,99 +1,108 @@
-Links
+# Links
+- [About](#about-this-fork)
+- [Versions](#versions)
+- [Download](#download)
+- [FAQ](#faq)
+- [Other useful files](#other-useful-files)
 
-About
+# AltoClef Advanced
+*Plays block game.*  
+*Powered by Baritone.*  
 
-Versions
+A client-side bot that tries to beat Minecraft on its own... but this fork is focused on **advanced features** like:
+- Better PvE and PvP combat
+- Smarter & smoother parkour (including block placement mid-jump)
+- Elytra acquisition
+- Armor trims and future Minecraft features
+- General QoL and smarter pathing
 
-Download
+**This fork is still under heavy development.** If you have questions, ideas, or bugs, feel free to reach out!  
+- Use the [issues](https://github.com/YourName/altoclef-advanced/issues)  
+- Or contact me on Discord  
 
-FAQ
+The original AltoClef became [the first bot to beat Minecraft fully autonomously](https://youtu.be/baAa6s8tahA) on May 24, 2021.  
+This fork builds on that legacy with new combat, movement, and feature expansions.
 
-Other useful files
+**Join the [Discord Server](https://discord.gg/JdFP4Kqdqc)** for discussions, updates, and goofs.
 
-Rylan’s AltoClef Fork
+---
 
-Plays block game… but smarter.
-Powered by Baritone + new features.
+## About this fork
+This fork aims to **extend AltoClef** with new mechanics and smarter behavior:
+- Advanced parkour with human-like smoothing
+- PvE/PvP combat improvements
+- Elytra and End-game progression tasks
+- Armor trims & duplication logic
+- “Whatever-it-takes” goal system
 
-A client-side bot that can beat Minecraft on its own — now with extra focus on PvE combat, PvP mechanics, advanced parkour, smoother movement, and more features.
+Based on [MiranCZ’s fork](https://github.com/MiranCZ/altoclef), which itself optimized [Marvion’s fork](https://github.com/MarvionKirito/altoclef).
 
-⚠️ This fork is still under active development. Expect bugs and half-finished systems. If you have suggestions, ideas, or find bugs, open an issue or contact me directly.
+---
 
-About this fork
+## The preprocessor
+This project uses the [Replay Mod preprocessor](https://github.com/ReplayMod/preprocessor) to stay compatible across multiple Minecraft versions.
 
-This fork builds on MiranCZ’s Altoclef fork
- and the original Altoclef project
-.
+### Versions
+Available on **Fabric** for versions between `1.21.1` and `1.16.5`.  
+If a version in this range is missing, feel free to open an issue.
 
-My goals:
+> [!NOTE]  
+> All versions use the same release of AltoClef Advanced, though some rely on older versions of Baritone.  
+> See the Baritone fork [here](https://github.com/MiranCZ/baritone_altoclef).
 
-Stronger PvE combat AI (smarter mob fighting).
+---
 
-Experimental PvP logic (axes vs shields, strafing, timing).
+## How it works
+- [Guide from the wiki](https://github.com/MiranCZ/altoclef/wiki/1:-Documentation:-Big-Picture)  
+- [Video explanation](https://youtu.be/q5OmcinQ2ck?t=387)  
 
-Advanced parkour: sprint chains, head-hitters, ladder/vine grabs, clutch block placement mid-jump.
+---
 
-Optional less robotic movement (yaw/pitch smoothing, timing jitter).
+## Download
+> [!IMPORTANT]  
+> After installing, move/delete your old Baritone configs if you have them.  
+> Preexisting configs will break AltoClef Advanced. This will be fixed in the future.
 
-High-level “do whatever it takes” mode for big goals (get diamonds, finish parkour course, grab Elytra, collect armor trims).
+Latest release builds can be found under [Releases](https://github.com/YourName/altoclef-advanced/releases).  
 
-Long-term: expanded item goals (armor trims, Elytra runs, more).
+| Version | Fabric Download Link |
+|---------|----------------------|
+| 1.21.1  | [Download](#) |
+| 1.21    | [Download](#) |
+| 1.20.6  | [Download](#) |
+| 1.20.5  | [Download](#) |
+| 1.20.4  | [Download](#) |
+| 1.20.2  | [Download](#) |
+| 1.20.1  | [Download](#) |
+| 1.19.4  | [Download](#) |
+| 1.18.2  | [Download](#) |
+| 1.18    | [Download](#) |
+| 1.17.1  | [Download](#) |
+| 1.16.5  | [Download](#) |
 
-Versions
+---
 
-Like the upstream fork, this uses the ReplayMod preprocessor
- to support many Fabric versions.
-Target range: 1.16.5 → 1.21.1 (inclusive).
+## FAQ
 
-How it works
+### My AltoClef is crashing! What do I do?
+- Make sure you downloaded the correct JAR for your Minecraft version.  
+- You **do not** need to add Baritone separately; it’s included.  
+- If you’re mixing this with other mods, crashes may happen.  
+- If the issue persists, open an [issue](https://github.com/YourName/altoclef-advanced/issues) with:
+  - Your Minecraft + Altoclef Advanced version  
+  - What happened  
+  - Crash log  
 
-Altoclef + Baritone together manage goals and pathing.
+### Will PvP / player attacking be supported?
+Yes — unlike the upstream fork, this version will include optional PvP logic for private servers with consent.
 
-My fork layers new tasks (combat, trims, Elytra) and parkour injection on top of Baritone.
+### Can you add version X of Minecraft?
+We support 1.16.5 → latest.  
+For brand-new versions, Baritone must be ported first before AltoClef Advanced can support it.
 
-See the original guide
- for base architecture.
+---
 
-Download
-
-⚠️ Important: remove old Baritone configs before installing. They conflict with Altoclef.
-
-Releases
-
-(work in progress — once I publish my own builds, they’ll be here)
-
-For now, check Releases
-.
-
-FAQ
-Crashing?
-
-Make sure you downloaded the correct JAR for your Minecraft version.
-
-Don’t add separate Baritone jars — Altoclef bundles it.
-
-Altoclef doesn’t play well with many other mods. Try running it alone.
-
-If you’re still stuck, open an issue and include:
-
-Minecraft version
-
-Altoclef fork version
-
-Crash log or reproduction steps
-
-Why add PvP/PvE back?
-
-This fork’s focus is fun + experimentation. Combat is a core part of Minecraft, so I want the bot to handle it.
-
-Can you add X version?
-
-If Baritone isn’t ported yet, then I can’t. I aim to support everything from 1.16.5+.
-
-Other useful files
-
-Usage Guide
-
-TODO / Future Features
-
-Development Guide
+## Other useful files
+- [Usage Guide](usage.md)  
+- [TODO / Future Features](TODO.md)  
+- [Development Guide](develop.md)  
