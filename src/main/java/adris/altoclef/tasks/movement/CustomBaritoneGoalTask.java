@@ -4,6 +4,7 @@ import adris.altoclef.AltoClef;
 import adris.altoclef.Debug;
 import adris.altoclef.control.InputControls;
 import adris.altoclef.multiversion.versionedfields.Blocks;
+import adris.altoclef.movement.AdvancedParkourModule;
 import adris.altoclef.tasksystem.ITaskRequiresGrounded;
 import adris.altoclef.tasksystem.Task;
 import adris.altoclef.util.helpers.WorldHelper;
@@ -108,7 +109,12 @@ public abstract class CustomBaritoneGoalTask extends Task implements ITaskRequir
     protected Task onTick() {
         AltoClef mod = AltoClef.getInstance();
         InputControls controls = mod.getInputControls();
-        
+
+        AdvancedParkourModule parkourModule = mod.getAdvancedParkourModule();
+        if (parkourModule.isEnabled() && parkourModule.tryInjectNextSegment()) {
+            setDebugState("Advanced parkour segment");
+        }
+
         if (mod.getClientBaritone().getPathingBehavior().isPathing()) {
             checker.reset();
         }

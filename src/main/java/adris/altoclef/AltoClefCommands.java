@@ -1,6 +1,7 @@
 package adris.altoclef;
 
 import adris.altoclef.commands.*;
+import adris.altoclef.commands.ParkourModeCommand;
 import adris.altoclef.commands.random.ScanCommand;
 import adris.altoclef.commands.random.DummyTaskCommand;
 import adris.altoclef.commandsystem.exception.CommandException;
@@ -39,7 +40,8 @@ public class AltoClefCommands {
                 new DummyTaskCommand(),
                 new FollowCommand(),
                 new ScanCommand(),
-                new GiveCommand()
+                new GiveCommand(),
+                new ParkourModeCommand()
         );
     }
 }
